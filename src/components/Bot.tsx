@@ -325,6 +325,19 @@ export const Bot = (props: BotProps & { class?: string }) => {
         return newSourceDocuments
     }
 
+    // Array of predefined questions
+    const predefinedQuestions = [
+        props.chatflowConfig?.question1 ? props.chatflowConfig?.question1 + '' : '',
+        props.chatflowConfig?.question2 ? props.chatflowConfig?.question2 + '': '',
+        props.chatflowConfig?.question3 ? props.chatflowConfig?.question3 + '': '',
+    ].filter(question => question); // Filter out empty questions
+
+    // Function to handle when a predefined question is clicked
+    const handlePredefinedQuestionClick = (question: string) => {
+        setUserInput(question);
+        handleSubmit(question);
+    };
+
     return (
         <>
             <div ref={botContainer} class={'relative flex w-full h-full text-base overflow-hidden bg-cover bg-center flex-col items-center chatbot-container ' + props.class}>
@@ -380,6 +393,18 @@ export const Bot = (props: BotProps & { class?: string }) => {
                                 </>
                             )}
                         </For>
+                    </div>
+                    <div class="flex w-full h-full justify-center">
+                    {/* Display predefined questions as buttons or chips */}
+                    <div class="predefined-questions">
+                        {predefinedQuestions.map((question, index) => (
+                            <button
+                                onClick={() => handlePredefinedQuestionClick(question)}
+                            >
+                                {question}
+                            </button>
+                        ))}
+                    </div>
                     </div>
                     <TextInput
                         backgroundColor={props.textInput?.backgroundColor}
