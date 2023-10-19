@@ -394,17 +394,16 @@ export const Bot = (props: BotProps & { class?: string }) => {
                             )}
                         </For>
                     </div>
-                    <div class="flex w-full h-full justify-center">
-                    {/* Display predefined questions as buttons or chips */}
-                    <div class="predefined-questions">
-                        {predefinedQuestions.map((question, index) => (
-                            <button
-                                onClick={() => handlePredefinedQuestionClick(question)}
-                            >
-                                {question}
-                            </button>
-                        ))}
-                    </div>
+                    <div style='position: absolute;bottom: 90px; width: 100%; padding: 16px 0; background: white;'>
+                        <div class="predefined-questions">
+                            {predefinedQuestions.map((question, index) => (
+                                <button style='padding: 6px; border-radius: 20px; margin: 0 12px;' class='chatbot-host-bubble'
+                                    onClick={() => handlePredefinedQuestionClick(question)}
+                                >
+                                    {question}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                     <TextInput
                         backgroundColor={props.textInput?.backgroundColor}
