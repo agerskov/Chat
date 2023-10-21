@@ -34,6 +34,8 @@ export type ChatWindowTheme = {
     botMessage?: BotMessageTheme;
     textInput?: TextInputTheme;
     poweredByTextColor?: string;
+    poweredByText?: string;
+    poweredByLink?: string;
 };
 export type ButtonTheme = {
     size?: 'medium' | 'large';
