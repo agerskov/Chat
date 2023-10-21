@@ -64,7 +64,7 @@ export const Badge = (props: Props) => {
         style={{ "font-weight": 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
         
-        <span> {props.poweredByText ?? 'Academondo'}</span>
+        <span> {props.poweredByText ? props.poweredByText : 'Academondo'}</span>
       </a>
     </span>
   )

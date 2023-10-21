@@ -27,6 +27,8 @@ export type BotProps = {
     userMessage?: UserMessageTheme
     textInput?: TextInputTheme
     poweredByTextColor?: string
+    poweredByText?: string
+    poweredByLink?: string
     badgeBackgroundColor?: string
     fontSize?: number
 }
@@ -415,7 +417,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
                         onSubmit={handleSubmit}
                     />
                 </div>
-                <Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} botContainer={botContainer} />
+                <Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} poweredByText={props.poweredByText} poweredByLink={props.poweredByLink} botContainer={botContainer} />
                 <BottomSpacer ref={bottomSpacer} />
             </div>
             {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)} />}
