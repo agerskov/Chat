@@ -25,7 +25,7 @@ export const Avatar = (props: { initialAvatarSrc?: string }) => {
         <img
           src={avatarSrc()}
           alt="Bot avatar"
-          class="rounded-full object-cover w-full h-full"
+          class="rounded-full w-full h-full"
         />
       </figure>
     </Show>
