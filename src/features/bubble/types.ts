@@ -43,6 +43,7 @@ export type ChatWindowTheme = {
     poweredByTextColor?: string
     poweredByText?: string
     poweredByLink?: string
+    isFullPage?: boolean
 }
 
 export type ButtonTheme = {
