@@ -26,3 +26,8 @@ export const isStreamAvailableQuery = ({ chatflowid, apiHost = 'http://localhost
         method: 'GET',
         url: `${apiHost}/api/v1/chatflows-streaming/${chatflowid}`,
     })
+export const deleteChatQuery = ({ chatflowid, apiHost = 'http://localhost:3000' }: MessageRequest) =>
+    sendRequest<any>({
+        method: 'DELETE',
+        url: `${apiHost}/api/v1/chatmessage/${chatflowid}`,
+    })
