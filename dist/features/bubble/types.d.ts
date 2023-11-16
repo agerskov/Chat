@@ -9,6 +9,7 @@ export type TextInputTheme = {
     backgroundColor?: string;
     textColor?: string;
     placeholder?: string;
+    newChatText?: string;
     sendButtonColor?: string;
 };
 export type UserMessageTheme = {

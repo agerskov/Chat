@@ -1,6 +1,7 @@
 import { JSX } from 'solid-js/jsx-runtime';
 type SendButtonProps = {
     sendButtonColor?: string;
+    newChatText?: string;
     isDisabled?: boolean;
     isLoading?: boolean;
     disableIcon?: boolean;

@@ -5,6 +5,7 @@ import { DeleteIcon } from './icons/DeleteIcon'
 
 type SendButtonProps = {
     sendButtonColor?: string
+    newChatText?: string
     isDisabled?: boolean
     isLoading?: boolean
     disableIcon?: boolean
