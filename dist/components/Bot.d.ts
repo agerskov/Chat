@@ -17,7 +17,12 @@ export type BotProps = {
     poweredByText?: string;
     poweredByLink?: string;
     badgeBackgroundColor?: string;
+    bubbleBackgroundColor?: string;
+    bubbleTextColor?: string;
+    title?: string;
+    titleAvatarSrc?: string;
     fontSize?: number;
+    isFullPage?: boolean;
 };
 export declare const Bot: (props: BotProps & {
     class?: string;
