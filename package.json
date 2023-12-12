@@ -7,7 +7,9 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "dev": "rollup --watch --config rollup.config.js",
+        "prebuild": "nvm use 18.18",
         "build": "rollup --config rollup.config.js",
+        "postbuild": "nvm use 16.13",
         "lint": "eslint \"src/**/*.ts*\"",
         "lint-fix": "eslint --fix \"src/**/*.ts*\""
     },
