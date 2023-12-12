@@ -20,11 +20,6 @@ export declare const isStreamAvailableQuery: ({ chatflowid, apiHost }: MessageRe
     data?: any;
     error?: Error | undefined;
 }>;
-export declare const deleteChatQuery: ({ chatflowid, apiHost }: MessageRequest) => Promise<{
-    data?: any;
-    error?: Error | undefined;
-}>;
-
 export declare const sendFileDownloadQuery: ({ apiHost, body }: MessageRequest) => Promise<{
     data?: any;
     error?: Error | undefined;
