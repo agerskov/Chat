@@ -487,8 +487,8 @@ export const Bot = (props: BotProps & { class?: string }) => {
             >
               <span style={{ 'font-family': 'Poppins, sans-serif' }}>Clear</span>
             </DeleteButton>
-          </div>
-          <div style='position: absolute;bottom: 90px; width: 100%; padding: 16px 0; background: white;'>
+          </div>          
+          <div style={{ position: 'absolute', bottom: '90px', width: '100%', padding: '16px', background: props.badgeBackgroundColor }}>
             <div class="predefined-questions">
                 {predefinedQuestions.map((question, index) => (
                     <button style='font-weight: 400; padding: 8px 16px; border-radius: 6px; margin: 0 0 0 12px;' class='chatbot-host-bubble'
