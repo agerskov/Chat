@@ -404,6 +404,8 @@ export const Bot = (props: BotProps & { class?: string }) => {
         props.chatflowConfig?.question1 ? props.chatflowConfig?.question1 + '' : '',
         props.chatflowConfig?.question2 ? props.chatflowConfig?.question2 + '': '',
         props.chatflowConfig?.question3 ? props.chatflowConfig?.question3 + '': '',
+        props.chatflowConfig?.question4 ? props.chatflowConfig?.question4 + '': '',
+        props.chatflowConfig?.question5 ? props.chatflowConfig?.question5 + '': '',
     ].filter(question => question); // Filter out empty questions
 
     // Function to handle when a predefined question is clicked
