@@ -34,9 +34,9 @@ export const Full = (props: FullProps, { element }: { element: HTMLElement }) =>
         <div
           style={{
             'background-color': props.theme?.chatWindow?.backgroundColor || '#ffffff',
-            'height': props.theme?.chatWindow?.height ? props.theme?.chatWindow?.height : '100vh',
-            'width': props.theme?.chatWindow?.width ? props.theme?.chatWindow?.width : '100%',
-            'margin': props.theme?.chatWindow?.margin ? props.theme?.chatWindow?.margin : '0px',
+            height: props.theme?.chatWindow?.height ? props.theme?.chatWindow?.height : '100vh',
+            width: props.theme?.chatWindow?.width ? props.theme?.chatWindow?.width : '100%',
+            margin: props.theme?.chatWindow?.margin ? props.theme?.chatWindow?.margin : '0px',
           }}
         >
           <Bot

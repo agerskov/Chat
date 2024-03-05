@@ -528,20 +528,20 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     return newSourceDocuments;
   };
 
-      // Array of predefined questions
-      const predefinedQuestions = [
-        props.chatflowConfig?.question1 ? props.chatflowConfig?.question1 + '' : '',
-        props.chatflowConfig?.question2 ? props.chatflowConfig?.question2 + '': '',
-        props.chatflowConfig?.question3 ? props.chatflowConfig?.question3 + '': '',
-        props.chatflowConfig?.question4 ? props.chatflowConfig?.question4 + '': '',
-        props.chatflowConfig?.question5 ? props.chatflowConfig?.question5 + '': '',
-    ].filter(question => question); // Filter out empty questions
+  // Array of predefined questions
+  const predefinedQuestions = [
+    props.chatflowConfig?.question1 ? props.chatflowConfig?.question1 + '' : '',
+    props.chatflowConfig?.question2 ? props.chatflowConfig?.question2 + '' : '',
+    props.chatflowConfig?.question3 ? props.chatflowConfig?.question3 + '' : '',
+    props.chatflowConfig?.question4 ? props.chatflowConfig?.question4 + '' : '',
+    props.chatflowConfig?.question5 ? props.chatflowConfig?.question5 + '' : '',
+  ].filter((question) => question); // Filter out empty questions
 
-    // Function to handle when a predefined question is clicked
-    const handlePredefinedQuestionClick = (question: string) => {
-        setUserInput(question);
-        handleSubmit(question);
-    };
+  // Function to handle when a predefined question is clicked
+  const handlePredefinedQuestionClick = (question: string) => {
+    setUserInput(question);
+    handleSubmit(question);
+  };
 
   const addRecordingToPreviews = (blob: Blob) => {
     const mimeType = blob.type.substring(0, blob.type.indexOf(';'));
@@ -982,7 +982,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
               />
             )}
           </div>
-          <Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} poweredByText={props.poweredByText} poweredByLink={props.poweredByLink} botContainer={botContainer} />
+          <Badge
+            badgeBackgroundColor={props.badgeBackgroundColor}
+            poweredByTextColor={props.poweredByTextColor}
+            poweredByText={props.poweredByText}
+            poweredByLink={props.poweredByLink}
+            botContainer={botContainer}
+          />
         </div>
       </div>
       {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)} />}

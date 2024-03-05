@@ -49,14 +49,13 @@ export const Badge = (props: Props) => {
       Powered by
       <a
         ref={liteBadge}
-        href={props.poweredByLink ??'https://academondo.com'}
+        href={props.poweredByLink ?? 'https://academondo.com'}
         target="_blank"
         rel="noopener noreferrer"
         class="lite-badge"
         id="lite-badge"
         style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        
         <span> {props.poweredByText ? props.poweredByText : 'Academondo'}</span>
       </a>
     </span>
